@@ -18,7 +18,7 @@ class TodoItemsController < ApplicationController
 
 	def complete
 		@todo_item.update_attribute(:completed_at, Time.now)
-		redirect_to @todo_list, notice: "Tâche complétée"
+		redirect_to @todo_list, notice: "Tâche complétée."
 	end
 
 	private
@@ -34,5 +34,4 @@ class TodoItemsController < ApplicationController
 	def todo_item_params
 		params[:todo_item].permit(:content)
 	end
-
 end
